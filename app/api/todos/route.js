@@ -7,13 +7,13 @@ export async function GET() {
 }
 
 // POST todo
-// export async function POST(res) {
-//     const body = await res.json()
-//     const newTodo = await prisma.todo.create({
-//         data: {
-//             title: body.title,
-//             desc: body.desc
-//         }
-//     })
-//     return Response.json(newTodo, { status: 201 }, { message: "Todo added successfully" })
-// }
+export async function POST(res) {
+    const body = await res.json()
+    const newTodo = await prisma.todo.create({
+        data: {
+            title: body.title,
+            desc: body.desc
+        }
+    })
+    return Response.json(newTodo, { status: 201 }, { message: "Todo added successfully" })
+}

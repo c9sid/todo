@@ -7,7 +7,7 @@ const Home = () => {
   const [todos, setTodos] = useState([]);
   const allTodos = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/todos/', { cache: "no-store" })
+      const res = await fetch('https://todo-pi-teal.vercel.app/api/todos/', { cache: "no-store" })
       const data = await res.json();
       setTodos(data);
     } catch (error) {
