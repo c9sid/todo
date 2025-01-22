@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body
         className={outfit.className}
       >
-        <main className="cantainer mx-auto max-w-5xl px-4 md:px-0">
+        <main className="cantainer mx-auto max-w-5xl px-4 md:px-0 overflow-hidden">
           {children}
         </main>
         <Toaster />
